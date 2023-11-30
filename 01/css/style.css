@@ -1,0 +1,52 @@
+@charset 'utf-8';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+.faq-wrap {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.faq-wrap > ul > li {
+  border: 1px solid #000;
+  padding: 30px;
+  margin: 10px 0;
+}
+
+.faq-wrap > ul > li > strong {
+  /* background: #ff5; */
+  display: block;
+  position: relative;
+}
+.faq-wrap > ul > li > strong::before {
+  content: "Q "; /* 스페이스 누르면 공백 만들 수 있음 한 번 까지만 먹음 */
+  color: #f00;
+}
+.faq-wrap > ul > li > strong::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: solid #000;
+  border-width: 3px 3px 0 0;
+  transform: rotate(135deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.answer {
+  background: #f5f5f5;
+  padding: 30px;
+  display: none; /* jquery 효과 넣기 위한 준비 */
+}
