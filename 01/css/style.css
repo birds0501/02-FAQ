@@ -43,10 +43,16 @@ ol {
   position: absolute;
   top: 0;
   right: 0;
+  transition: 0.3s;
 }
 
 .answer {
   background: #f5f5f5;
   padding: 30px;
   display: none; /* jquery 효과 넣기 위한 준비 */
+}
+
+.faq-wrap > ul > li.on > strong::after {
+  border-color: #f00;
+  transform: rotate(315deg);
 }
